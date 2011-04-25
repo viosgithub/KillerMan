@@ -43,7 +43,7 @@ public class KillerMan extends Activity implements OnClickListener {
 					else
 					{
 						//kill package
-						am.restartPackage(app.processName);
+						am.killBackgroundProcesses(app.processName);
 					}
 				}
 				catch(NameNotFoundException e)
@@ -51,7 +51,7 @@ public class KillerMan extends Activity implements OnClickListener {
 					e.printStackTrace();
 				}
 			}
-			am.restartPackage("com.foo.KillerMan");
+			am.killBackgroundProcesses("com.foo.KillerMan");
 		}
 	}
 }
